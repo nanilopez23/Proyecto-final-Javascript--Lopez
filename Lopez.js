@@ -8,10 +8,9 @@ let precioProduct, cantidadProduct
 
 let resultado = 0
 function precioTotal (precioProduct, cantidadProduct){
-    precioProduct = parseInt(prompt("Ingrese el precio de la botella que desea comprar"))
-    cantidadProduct = parseInt (prompt("Ingrese la cantidad de botellas que desea comprar"))
-    document.write ("<h3>" + "El precio de su botella es de " + precioProduct + " y la cantidad de botellas que desea comprar es "+ cantidadProduct + "</h3"+ "<br>")
-
+    precioProduct = parseInt(prompt("Ingrese el precio de la botella que desea comprar"));
+    cantidadProduct = parseInt (prompt("Ingrese la cantidad de botellas que desea comprar"));
+    document.write ("<h3>" + "El precio de su botella es de " + precioProduct + " y la cantidad de botellas que desea comprar es "+ cantidadProduct + "</h3"+ "<br>");
     if (cantidadProduct > precioProduct){
         alert("La cantidad no puede ser mayor que el precio")
     }
@@ -28,30 +27,31 @@ document.write ("<br>" + "El precio total sin descuento es de "+ resultado)
 
 // descuentos por cantidad 
 
-let precioDesc = 0
+let precioDesc
 
 function precioDescuentos (resultado, cantidadProduct){
-
     switch (cantidadProduct){
         case 1:
             precioDesc = resultado
         break
         case 2:
-            precioDesc = resultado - resultado * 0.05
+            precioDesc = resultado - (resultado * 0.05)
         break
         case 3: 
         precioDesc = resultado - (resultado * 0.1)
         break
         case 4: 
-            precioDesc = resultado - resultado * 0.15
+            precioDesc = resultado - (resultado * 0.15)
         break
         case 5: 
-            precioDesc = resultado - resultado * 0.20
+            precioDesc = resultado - (resultado * 0.20)
         break
         default:
             precioDesc = resultado 
             console.log("no hay descuento para dicha cantidad")
         break
     }
+    console.log(precioDesc)
 }
-console.log(precioDesc)
+
+
