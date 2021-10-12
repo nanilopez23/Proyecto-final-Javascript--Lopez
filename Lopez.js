@@ -4,13 +4,14 @@ teniendo e cuenta esos valores te calcule un descuento por cantidad*/
 
 // solicitar al usuario que ingrese el precio de un producto y su cantidad 
 
-let precioProduct = parseInt(prompt("Ingrese el precio de la botella que desea comprar"))
-
-let cantidadProduct = parseInt (prompt("Ingrese la cantidad de botellas que desea comprar"))
-document.write ("<h3>" + "El precio de su botella es de " + precioProduct + " y la cantidad de botellas que desea comprar es "+ cantidadProduct + "</h3"+ "<br>")
+let precioProduct, cantidadProduct
 
 let resultado = 0
 function precioTotal (precioProduct, cantidadProduct){
+    precioProduct = parseInt(prompt("Ingrese el precio de la botella que desea comprar"))
+    cantidadProduct = parseInt (prompt("Ingrese la cantidad de botellas que desea comprar"))
+    document.write ("<h3>" + "El precio de su botella es de " + precioProduct + " y la cantidad de botellas que desea comprar es "+ cantidadProduct + "</h3"+ "<br>")
+
     if (cantidadProduct > precioProduct){
         alert("La cantidad no puede ser mayor que el precio")
     }
