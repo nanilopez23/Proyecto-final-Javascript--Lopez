@@ -54,6 +54,6 @@ function precioDescuentos (resultado, cantidadProduct){
     console.log(precioDesc)
 }
 precioDescuentos(resultado,cantidadProduct)
-document.write("<br>" +"El precio del total de producto con su desceunto aplicado es de "+ precioDesc)
+document.write(`<br>El precio del total de producto con su desceunto aplicado es de ${precioDesc}`)
 
 
