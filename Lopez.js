@@ -68,4 +68,19 @@ function precioXCuotas (precioDesc, cuotas){
 }
 precioXCuotas(precioDesc, cuotas)
 
-document.write("<br>" + "Usted pagara en " + cuotas + " y su monto final por cuota es de " + Math.round(precioCuotas))
+document.write("<br>" + "Usted tiene " + cuotas + " de " + Math.round(precioCuotas) + " sin impustos")
+
+// precio con impuesto %21
+
+let iva = 0.21
+let precioDescIva, precioCuotasIva
+function preciosIva (precioDesc, precioCuotas){
+    precioCuotasIva = precioCuotas + precioCuotas * iva 
+    precioDescIva = precioDesc + precioDesc * iva 
+    console.log (precioDescIva)
+    console.log (precioCuotasIva)
+
+}
+preciosIva(precioDesc, precioCuotas)
+
+document.write("<br>" + "Su monto total a pagar con impuestos es de " + precioDescIva +" y su monto por cuota, con impuestos, es de " + Math.round(precioCuotasIva))
