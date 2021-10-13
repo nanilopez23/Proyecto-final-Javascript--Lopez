@@ -54,6 +54,18 @@ function precioDescuentos (resultado, cantidadProduct){
     console.log(precioDesc)
 }
 precioDescuentos(resultado,cantidadProduct)
-document.write(`<br>El precio del total de producto con su desceunto aplicado es de ${precioDesc}`)
+document.write("<p>" + "<br>" + "El precio del total de producto con su desceunto aplicado es de " +precioDesc + "</p>")
 
+let cuotas = parseInt(prompt("Ingrese el número de cuotas que prefiera: "))
+if (cuotas > 24){
+    alert("Es preferible que pague en menos de 24 cuotas")
+}
+let precioCuotas
 
+function precioXCuotas (precioDesc, cuotas){
+    precioCuotas = precioDesc / cuotas
+    console.log(Math.round(precioCuotas))
+}
+precioXCuotas(precioDesc, cuotas)
+
+document.write("<br>" + "Usted pagara en " + cuotas + " y su monto final por cuota es de " + Math.round(precioCuotas))
