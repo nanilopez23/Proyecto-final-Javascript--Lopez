@@ -7,7 +7,7 @@ teniendo e cuenta esos valores te calcule un descuento por cantidad*/
 let precioProduct, cantidadProduct
 
 let resultado = 0
-function precioTotal (precioProduct, cantidadProduct){
+function precioTotal (){
     precioProduct = parseInt(prompt("Ingrese el precio de la botella que desea comprar"));
     cantidadProduct = parseInt (prompt("Ingrese la cantidad de botellas que desea comprar"));
     document.write ("<h3>" + "El precio de su botella es de " + precioProduct + " y la cantidad de botellas que desea comprar es "+ cantidadProduct + "</h3"+ "<br>");
@@ -53,5 +53,7 @@ function precioDescuentos (resultado, cantidadProduct){
     }
     console.log(precioDesc)
 }
+precioDescuentos(resultado,cantidadProduct)
+document.write("<br>" +"El precio del total de producto con su desceunto aplicado es de "+ precioDesc)
 
 
