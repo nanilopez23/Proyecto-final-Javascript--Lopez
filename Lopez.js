@@ -1,8 +1,16 @@
-// 04 Simulador Interactivo
-/* Lo que busque hacer es que uno ingrese el precio de X producto y la cantidad.
-teniendo e cuenta esos valores te calcule un descuento por cantidad*/
+//agregar objetos  
 
-// solicitar al usuario que ingrese el precio de un producto y su cantidad 
+function botella (nombre, precio, tipo){
+    this.nombre = nombre
+    this.precio = precio
+    this.tipo = tipo 
+    this.hablar = function (){console.log("Este vino se llama "+ nombre+ " tiene un precio de " + precio+ " y es del tipo "+ tipo)}
+}
+
+let botellaMalbec = new botella ("Trapiche", 5000 , "Malbec" )
+let botellaBlanco = new botella ("New Age", 2000, "Blanco")
+botellaMalbec.hablar()
+botellaBlanco.hablar()
 
 let precioProduct, cantidadProduct
 
@@ -54,7 +62,7 @@ function precioDescuentos (resultado, cantidadProduct){
     console.log(precioDesc)
 }
 precioDescuentos(resultado,cantidadProduct)
-document.write("<p>" + "<br>" + "El precio del total de producto con su desceunto aplicado es de " +precioDesc + "</p>")
+document.write("<p>" + "<br>" + "El precio del total de producto con su desceunto de cantidad aplicado es de " +precioDesc + "</p>")
 
 let cuotas = parseInt(prompt("Ingrese el número de cuotas que prefiera: "))
 if (cuotas > 24){
@@ -68,7 +76,7 @@ function precioXCuotas (precioDesc, cuotas){
 }
 precioXCuotas(precioDesc, cuotas)
 
-document.write("<br>" + "Usted tiene " + cuotas + " de " + Math.round(precioCuotas) + " sin impustos")
+document.write("<br>" + "Usted tiene " + cuotas + " cuotas de " + Math.round(precioCuotas) + " sin impustos")
 
 // precio con impuesto %21
 
