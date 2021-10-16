@@ -3,7 +3,7 @@
 
 
 
-class remeras {
+class remera {
     constructor(nombre, precio, estilo, talle) {
         this.nombre = nombre
         this.precio = parseFloat(precio)
@@ -13,12 +13,12 @@ class remeras {
     }
 }
 
-let remeraMen = new remeras ("Aviac", 3000 , "Remera Minimalista", "M" )
-let remeraWom = new remeras ("Viking", 4000, "Remera Minimalista", "M")
-remeraMen.hablar()
-remeraWom.hablar()
+let remera1 = new remera ("Aviac", 3000 , "Remera Minimalista", "M" )
+let remera2 = new remera ("Viking", 4000, "Remera Minimalista", "M")
+remera1.hablar()
+remera2.hablar()
 
-class pantalones {
+class pantalon {
     constructor(nombre, precio, estilo, talle) {
         this.nombre = nombre
         this.precio = parseFloat (precio)
@@ -28,17 +28,43 @@ class pantalones {
     }
 }
 
-let pantalonMen = new remeras ("Bell", 4000 , "Pantalon Minimalista", "38" )
-let pantalonWom = new remeras ("Zara", 5000, "Pantalon Minimalista", "24")
-pantalonMen.hablar()
-pantalonWom.hablar()
+let pantalon1 = new pantalon ("Bell", 4000 , "Pantalon Minimalista", "38" )
+let pantalon2 = new pantalon ("Zara", 5000, "Pantalon Minimalista", "24")
+pantalon1.hablar()
+pantalon2.hablar()
 
 //Array de productos 
 
-const listaremeras = [remeraMen.nombre, remeraWom.nombre]
+const listaremeras = [remera1.nombre, remera2.nombre]
 console.log(listaremeras)
-const listapantalones = [pantalonMen.nombre, pantalonWom.nombre]
+const listapantalones = [pantalon1.nombre, pantalon2.nombre]
 console.log(listapantalones)
+
+let listaProductos = prompt ("Quieres ver nuestra lista de productos ?")
+
+if (listaProductos == "si"){
+    document.write ("Pantalones: "+ pantalon1.nombre + " y " + pantalon2.nombre)
+    document.write ("<br>")
+    document.write ("Remeras: " + remera1.nombre + " y " + remera2.nombre )
+} 
+
+let tipoProducto = prompt ("Que tipo de producto eligira, remera o pantalon")
+let eleccionRemera, eleccionPantalon
+
+
+function eleccion (tipoProducto, eleccionPantalon, eleccionRemera) {
+    if (tipoProducto == "pantalon"){
+        eleccionPantalon = prompt ("Indique el nombre del producto")
+    }else if (tipoProducto == "remera"){
+        eleccionRemera = prompt ("Indique el nombre del producto")
+    }
+    console.log (eleccion)
+
+    
+}
+eleccion (tipoProducto, eleccionPantalon, eleccionRemera)
+
+
 
 
 
