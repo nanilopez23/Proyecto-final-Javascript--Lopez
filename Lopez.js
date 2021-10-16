@@ -1,18 +1,48 @@
 //agregar objetos  
 
-function botella (nombre, precio, tipo){
-    this.nombre = nombre
-    this.precio = precio
-    this.tipo = tipo 
-    this.hablar = function (){console.log("Este vino se llama "+ nombre+ " tiene un precio de " + precio+ " y es del tipo "+ tipo)}
+
+
+
+class remeras {
+    constructor(nombre, precio, estilo, talle) {
+        this.nombre = nombre
+        this.precio = parseFloat(precio)
+        this.estilo = estilo
+        this.talle = ["S", "M", "L"]
+        this.hablar = function () { console.log("Caracteristicas de la prenda: " + " - " + nombre + " - " + precio + " - " + estilo + " - " + talle) }
+    }
 }
 
-let botellaMalbec = new botella ("Trapiche", 5000 , "Malbec" )
-let botellaBlanco = new botella ("New Age", 2000, "Blanco")
-botellaMalbec.hablar()
-botellaBlanco.hablar()
+let remeraMen = new remeras ("Aviac", 3000 , "Remera Minimalista", "M" )
+let remeraWom = new remeras ("Viking", 4000, "Remera Minimalista", "M")
+remeraMen.hablar()
+remeraWom.hablar()
 
-let precioProduct, cantidadProduct
+class pantalones {
+    constructor(nombre, precio, estilo, talle) {
+        this.nombre = nombre
+        this.precio = parseFloat (precio)
+        this.estilo = estilo
+        this.talle = ["S", "M", "L"]
+        this.hablar = function () { console.log("Caracteristicas de la prenda: " + " - " + nombre + " - " + precio + " - " + estilo + " - " + talle) }
+    }
+}
+
+let pantalonMen = new remeras ("Bell", 4000 , "Pantalon Minimalista", "38" )
+let pantalonWom = new remeras ("Zara", 5000, "Pantalon Minimalista", "24")
+pantalonMen.hablar()
+pantalonWom.hablar()
+
+//Array de productos 
+
+const listaremeras = [remeraMen.nombre, remeraWom.nombre]
+console.log(listaremeras)
+const listapantalones = [pantalonMen.nombre, pantalonWom.nombre]
+console.log(listapantalones)
+
+
+
+/*let precioProduct, cantidadProduct
 
 let resultado = 0
 function precioTotal (){
@@ -92,3 +122,4 @@ function preciosIva (precioDesc, precioCuotas){
 preciosIva(precioDesc, precioCuotas)
 
 document.write("<br>" + "Su monto total a pagar con impuestos es de " + precioDescIva +" y su monto por cuota, con impuestos, es de " + Math.round(precioCuotasIva))
+*/
