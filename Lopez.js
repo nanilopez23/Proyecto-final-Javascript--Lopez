@@ -48,7 +48,7 @@ if (listaProductos == "si"){
     document.write ("Remeras: " + remera1.nombre + " y " + remera2.nombre )
 } 
 
-let tipoProducto = prompt ("Que tipo de producto eligira, remera o pantalon")
+let tipoProducto = prompt ("Que tipo de producto desea, remera o pantalon")
 let eleccionRemera, eleccionPantalon
 
 
