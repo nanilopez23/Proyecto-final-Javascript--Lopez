@@ -22,10 +22,10 @@ function precioSugerido (){
     return this.precio * 1.21 * 1.25
 }
 //Array de productos 
-
+let nombreProd
 let listaProductos = []
 do{
-    let nombreProd = prompt ("ingrese el nombre del producto").toLowerCase()
+    nombreProd = prompt ("ingrese el nombre del producto").toLowerCase()
     let precioProd = prompt ("Ingrese el precio del producto")
         let detalleProd = prompt ("ingrese el detalle del producto")
         let cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
