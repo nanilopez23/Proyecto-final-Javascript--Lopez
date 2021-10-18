@@ -56,85 +56,76 @@ for (let producto of listaProductos){
     console.log(precio.sumarIva)
 }
 
+// Producto con poco Stock
 
-/*let precioProduct, cantidadProduct
+let pocoStock = listaProductos.filter(producto => producto.cantidad <= 3)
+console.log("producto con poco stock, comprar nuevamente: ")
+console.log(pocoStock)
+document.write("<h3> Lista de productos con poco stock (menos de 3 unidades): </h3>")
 
-let resultado = 0
-function precioTotal (){
-    precioProduct = parseInt(prompt("Ingrese el precio de la botella que desea comprar"));
-    cantidadProduct = parseInt (prompt("Ingrese la cantidad de botellas que desea comprar"));
-    document.write ("<h3>" + "El precio de su botella es de " + precioProduct + " y la cantidad de botellas que desea comprar es "+ cantidadProduct + "</h3"+ "<br>");
-    if (cantidadProduct > precioProduct){
-        alert("La cantidad no puede ser mayor que el precio")
-    }
-    if (cantidadProduct > 5){
-        alert ("No puede pedir más de 5 unidades")
-    }
-
-        resultado = precioProduct * cantidadProduct
+for (let producto of pocoStock){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
+    document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li></ul><br>")
 }
 
-precioTotal(precioProduct,cantidadProduct)
-console.log(resultado)
-document.write ("<br>" + "El precio total sin descuento es de "+ resultado)
+//Producto sin Stock
 
-// descuentos por cantidad 
+let sinStock = listaProductos.filter(producto => producto.cantidad == 0 || producto.disponible == false)
+console.log (sinStock)
+document.write ("<h3> Lista de productos sin Stock (cantidad = 0 o disponible = false): </h3>")
 
-let precioDesc
-
-function precioDescuentos (resultado, cantidadProduct){
-    switch (cantidadProduct){
-        case 1:
-            precioDesc = resultado
-        break
-        case 2:
-            precioDesc = resultado - (resultado * 0.05)
-        break
-        case 3: 
-        precioDesc = resultado - (resultado * 0.1)
-        break
-        case 4: 
-            precioDesc = resultado - (resultado * 0.15)
-        break
-        case 5: 
-            precioDesc = resultado - (resultado * 0.20)
-        break
-        default:
-            precioDesc = resultado 
-            console.log("no hay descuento para dicha cantidad")
-        break
-    }
-    console.log(precioDesc)
+for (let producto of sinStock){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
+    document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li></ul><br>")
 }
-precioDescuentos(resultado,cantidadProduct)
-document.write("<p>" + "<br>" + "El precio del total de producto con su desceunto de cantidad aplicado es de " +precioDesc + "</p>")
 
-let cuotas = parseInt(prompt("Ingrese el número de cuotas que prefiera: "))
-if (cuotas > 24){
-    alert("Es preferible que pague en menos de 24 cuotas")
+//buscar un producto por nombre ingresado 
+
+let ingresado = prompt("Ingrese el nombre del producto que quiera buscar")
+let prodIngresado = listaProductos.filter(producto => producto.nombre.includes(ingresado))
+console.log(prodIngresado)
+document.write("<h3> Lista de productos ingresados para busqueda: </h3>")
+
+for (let producto of prodIngresado){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
+    document.write("<li><h3>Precio: " + producto.precio + "</h3></li></ul><br>")
 }
-let precioCuotas
 
-function precioXCuotas (precioDesc, cuotas){
-    precioCuotas = precioDesc / cuotas
-    console.log(Math.round(precioCuotas))
+
+//Ordenados por cantidad 
+
+let ordenadosCantidad = []
+ordenadosCantidad = listaProductos.map(elemento => elemento)
+ordenadosCantidad.sort(function(a, b){
+    return a.cantidad- b.cantidad
+})
+console.log ("Ordenados por Cantidad Ascendente: ")
+console.log(ordenadosCantidad)
+document.write("<h3> Lista de productos ordenados por cantidad:  </h3>")
+
+for (let producto of ordenadosCantidad){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
+    document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li></ul><br>")
 }
-precioXCuotas(precioDesc, cuotas)
 
-document.write("<br>" + "Usted tiene " + cuotas + " cuotas de " + Math.round(precioCuotas) + " sin impustos")
+//Ordenados por precio 
+var ordenadosPrecio =[]
+ordenadosPrecio = listaProductos.map(elemento => elemento)
+var ordenadosPrecio = listaProductos
+ordenadosPrecio.sort(function(a, b){
+    return a.precio- b.precio
+})
+console.log("Ordenados por precios Ascendentes")
+console.log(ordenadosPrecio)
+document.write("<h3> Lista de productos ordenados por precio ascendente: </h3>")
 
-// precio con impuesto %21
-
-let iva = 0.21
-let precioDescIva, precioCuotasIva
-function preciosIva (precioDesc, precioCuotas){
-    precioCuotasIva = precioCuotas + precioCuotas * iva 
-    precioDescIva = precioDesc + precioDesc * iva 
-    console.log (precioDescIva)
-    console.log (precioCuotasIva)
-
+for (let producto of ordenadosPrecio){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
+    document.write("<li><h3>Precio: " + producto.precio + "</h3></li></ul><br>")
 }
-preciosIva(precioDesc, precioCuotas)
 
-document.write("<br>" + "Su monto total a pagar con impuestos es de " + precioDescIva +" y su monto por cuota, con impuestos, es de " + Math.round(precioCuotasIva))
-*/
