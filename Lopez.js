@@ -25,18 +25,14 @@ function precioSugerido (){
 
 let listaProductos = []
 do{
-    let comprobacion = prompt ("ingrese el nombre del producto")
-    if (comprobacion === "fin" || comprobacion === "Fin" || comprobacion === "FIN"){
-        break
-    }else{
-        nombreProd = comprobacion
-        let precioProd = prompt ("Ingrese el precio del producto")
+    let nombreProd = prompt ("ingrese el nombre del producto").toLowerCase()
+    let precioProd = prompt ("Ingrese el precio del producto")
         let detalleProd = prompt ("ingrese el detalle del producto")
         let cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
         listaProductos.push (new producto(nombreProd, precioProd, detalleProd, cantidadProd))
-    }
-}
-while (comprobacion != "fin" || comprobacion != "Fin" || comprobacion != "FIN")
+}while (nombreProd != "fin")
+
+
 
 console.log (listaProductos)
 
