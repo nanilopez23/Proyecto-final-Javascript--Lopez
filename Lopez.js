@@ -1,8 +1,5 @@
 //agregar objetos  
 
-
-
-
 class producto {
     constructor(nombre, precio, detalle, cantidad) {
         this.nombre = nombre
