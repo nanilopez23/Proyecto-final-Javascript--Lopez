@@ -3,69 +3,58 @@
 
 
 
-class remera {
-    constructor(nombre, precio, estilo, talle) {
+class producto {
+    constructor(nombre, precio, detalle, cantidad) {
         this.nombre = nombre
         this.precio = parseFloat(precio)
-        this.estilo = estilo
-        this.talle = ["S", "M", "L"]
-        this.hablar = function () { console.log("Caracteristicas de la prenda: " + " - " + nombre + " - " + precio + " - " + estilo + " - " + talle) }
+        this.detalle = detalle
+        this.cantidad = cantidad
+        this.disponible = true
+        this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
     }
 }
 
-let remera1 = new remera ("Aviac", 3000 , "Remera Minimalista", "M" )
-let remera2 = new remera ("Viking", 4000, "Remera Minimalista", "M")
-remera1.hablar()
-remera2.hablar()
-
-class pantalon {
-    constructor(nombre, precio, estilo, talle) {
-        this.nombre = nombre
-        this.precio = parseFloat (precio)
-        this.estilo = estilo
-        this.talle = ["S", "M", "L"]
-        this.hablar = function () { console.log("Caracteristicas de la prenda: " + " - " + nombre + " - " + precio + " - " + estilo + " - " + talle) }
-    }
+function sumarIva (){
+    return this.precio * 1.21
+}
+function vender (){
+    this.disponible = false 
 }
 
-let pantalon1 = new pantalon ("Bell", 4000 , "Pantalon Minimalista", "38" )
-let pantalon2 = new pantalon ("Zara", 5000, "Pantalon Minimalista", "24")
-pantalon1.hablar()
-pantalon2.hablar()
-
+function precioSugerido (){
+    return this.precio * 1.21 * 1.25
+}
 //Array de productos 
 
-const listaremeras = [remera1.nombre, remera2.nombre]
-console.log(listaremeras)
-const listapantalones = [pantalon1.nombre, pantalon2.nombre]
-console.log(listapantalones)
-
-let listaProductos = prompt ("Quieres ver nuestra lista de productos ?")
-
-if (listaProductos == "si"){
-    document.write ("Pantalones: "+ pantalon1.nombre + " y " + pantalon2.nombre)
-    document.write ("<br>")
-    document.write ("Remeras: " + remera1.nombre + " y " + remera2.nombre )
-} 
-
-let tipoProducto = prompt ("Que tipo de producto desea, remera o pantalon")
-let eleccionRemera, eleccionPantalon
-
-
-function eleccion (tipoProducto, eleccionPantalon, eleccionRemera) {
-    if (tipoProducto == "pantalon"){
-        eleccionPantalon = prompt ("Indique el nombre del producto")
-    }else if (tipoProducto == "remera"){
-        eleccionRemera = prompt ("Indique el nombre del producto")
+let listaProductos = []
+do{
+    let comprobacion = prompt ("ingrese el nombre del producto")
+    if (comprobacion === "fin" || comprobacion === "Fin" || comprobacion === "FIN"){
+        break
+    }else{
+        nombreProd = comprobacion
+        let precioProd = prompt ("Ingrese el precio del producto")
+        let detalleProd = prompt ("ingrese el detalle del producto")
+        let cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
+        listaProductos.push (new producto(nombreProd, precioProd, detalleProd, cantidadProd))
     }
-    console.log (eleccion)
-
-    
 }
-eleccion (tipoProducto, eleccionPantalon, eleccionRemera)
+while (comprobacion != "fin" || comprobacion != "Fin" || comprobacion != "FIN")
 
+console.log (listaProductos)
 
-
+for (let producto of listaProductos){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
+    document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li>")
+    document.write("<li><h3>Precio: " + producto.precio + "</h3></li>")
+    document.write("<li><h3>El precio con IVA es: " + producto.sumarIva + "</h3></li></ul><br>")
+    console.log(producto.nombre)
+    console.log(producto.detalle)
+    console.log(producto.cantidad)
+    console.log(producto.recio)
+    console.log(precio.sumarIva)
+}
 
 
 /*let precioProduct, cantidadProduct
