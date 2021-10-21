@@ -1,3 +1,7 @@
+// HICE VOY A HACER UN SISTEMA DE CONTROL DE INVENTRIO
+//TODAVIA ESTOY EVALUANDO COMO LO VOY A HACER PERO ES UN BUEN COMIENZO 
+
+
 //agregar objetos  
 
 class producto {
@@ -7,7 +11,7 @@ class producto {
         this.detalle = detalle
         this.cantidad = cantidad
         this.disponible = true
-        this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
+        //this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
     }
 }
 
@@ -22,14 +26,14 @@ function precioSugerido (){
     return this.precio * 1.21 * 1.25
 }
 //Array de productos 
-let nombreProd
+let nombreProd, precioProd, detalleProd, cantidadProd
 let listaProductos = []
 do{
     nombreProd = prompt ("ingrese el nombre del producto").toLowerCase()
-    let precioProd = prompt ("Ingrese el precio del producto")
-        let detalleProd = prompt ("ingrese el detalle del producto")
-        let cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
-        listaProductos.push (new producto(nombreProd, precioProd, detalleProd, cantidadProd))
+    precioProd = prompt ("Ingrese el precio del producto")
+    detalleProd = prompt ("ingrese el detalle del producto")
+    cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
+    listaProductos.push (new producto(nombreProd, precioProd, detalleProd, cantidadProd))
 }while (nombreProd != "fin")
 
 
@@ -37,7 +41,7 @@ do{
 console.log (listaProductos)
 
 for (let producto of listaProductos){
-    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li>")
     document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
     document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li>")
     document.write("<li><h3>Precio: " + producto.precio + "</h3></li>")
@@ -45,8 +49,8 @@ for (let producto of listaProductos){
     console.log(producto.nombre)
     console.log(producto.detalle)
     console.log(producto.cantidad)
-    console.log(producto.recio)
-    console.log(precio.sumarIva)
+    console.log(producto.precio)
+    //console.log(precio.sumarIva)
 }
 
 // Producto con poco Stock
