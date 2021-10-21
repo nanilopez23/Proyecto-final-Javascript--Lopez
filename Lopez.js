@@ -14,7 +14,7 @@ class producto {
         //this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
     }
 }
-
+// en esta parte tengo dudas 
 function sumarIva (){
     return this.precio * 1.21
 }
