@@ -70,7 +70,7 @@ for (let producto of pocoStock){
 
 let sinStock = listaProductos.filter(producto => producto.cantidad == 0 || producto.disponible == false)
 console.log (sinStock)
-document.write ("<h3> Lista de productos sin Stock (cantidad = 0 o disponible = false): </h3>")
+document.write ("<h3> Lista de productos sin Stock: </h3>")
 
 for (let producto of sinStock){
     document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
