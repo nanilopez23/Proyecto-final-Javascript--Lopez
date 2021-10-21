@@ -55,10 +55,10 @@ for (let producto of listaProductos){
 
 // Producto con poco Stock
 
-let pocoStock = listaProductos.filter(producto => producto.cantidad <= 3)
+let pocoStock = listaProductos.filter(producto => producto.cantidad <= 10)
 console.log("producto con poco stock, comprar nuevamente: ")
 console.log(pocoStock)
-document.write("<h3> Lista de productos con poco stock (menos de 3 unidades): </h3>")
+document.write("<h3> Lista de productos con poco stock (menos de 10 unidades): </h3>")
 
 for (let producto of pocoStock){
     document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
