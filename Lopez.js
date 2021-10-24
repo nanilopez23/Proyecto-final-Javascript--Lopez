@@ -14,20 +14,11 @@ class producto {
         //this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
     }
 }
-// en esta parte tengo dudas 
-function sumarIva (){
-    return this.precio * 1.21
-}
-function vender (){
-    this.disponible = false 
-}
 
-function precioSugerido (){
-    return this.precio * 1.21 * 1.25
-}
 //Array de productos 
 let nombreProd, precioProd, detalleProd, cantidadProd
 let listaProductos = []
+
 do{
     nombreProd = prompt ("ingrese el nombre del producto").toLowerCase()
     precioProd = prompt ("Ingrese el precio del producto")
@@ -35,8 +26,6 @@ do{
     cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
     listaProductos.push (new producto(nombreProd, precioProd, detalleProd, cantidadProd))
 }while (nombreProd != "fin")
-
-
 
 console.log (listaProductos)
 
