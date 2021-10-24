@@ -32,6 +32,8 @@ do{
 
 console.log (listaProductos)
 
+
+
 for (let producto of listaProductos){
     document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li>")
     document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
