@@ -11,6 +11,7 @@ class producto {
         this.detalle = detalle
         this.cantidad = cantidad
         this.precioIva = precio *1.21
+        this.precioSugerido = precio *1.21 * 1.30
         this.disponible = true
         //this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
     }
@@ -42,6 +43,22 @@ for (let producto of listaProductos){
     console.log(producto.cantidad)
     console.log(producto.precio)
     //console.log(precio.sumarIva)
+}
+
+document.write("<h3> Precios de cada unidad de compra: </h3>" )
+for (let producto of listaProductos){
+    document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li>")
+    document.write("<li><h3>Precio: " + producto.precio + "</h3></li>")
+    document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li>")
+    document.write("<li><h3>Precio unitario con Iva: " + producto.precioIva + "</h3></li>")
+    document.write("<li><h3>Precio por cantidad con Iva: " + producto.precioIva * producto.cantidad + "</h3></li>")
+    document.write("<li><h3>El precio sugerido de venta por unidad es: " + producto.precioSugerido + "</h3></li></ul><br>")
+    console.log(producto.nombre)
+    console.log(producto.precio)
+    console.log(producto.cantidad)
+    console.log(producto.precioIva)
+    console.log(producto.precioIva * producto.cantidad)
+    console.log(producto.precioSugerido)
 }
 
 // Producto con poco Stock
