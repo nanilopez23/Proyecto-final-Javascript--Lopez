@@ -10,10 +10,12 @@ class producto {
         this.precio = parseFloat(precio)
         this.detalle = detalle
         this.cantidad = cantidad
+        this.precioIva = precio *1.21
         this.disponible = true
         //this.hablar = function () { console.log("Caracteristicas del producto: " + " - " + nombre +" - " + precio + " - " + detalle + " - "+ cantidad) }
     }
 }
+
 
 //Array de productos 
 let nombreProd, precioProd, detalleProd, cantidadProd
@@ -34,7 +36,7 @@ for (let producto of listaProductos){
     document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
     document.write("<li><h3>Cantidad: " + producto.cantidad + "</h3></li>")
     document.write("<li><h3>Precio: " + producto.precio + "</h3></li>")
-    document.write("<li><h3>El precio con IVA es: " + producto.sumarIva + "</h3></li></ul><br>")
+    document.write("<li><h3>El precio con IVA es: " + producto.precioIva + "</h3></li></ul><br>")
     console.log(producto.nombre)
     console.log(producto.detalle)
     console.log(producto.cantidad)
