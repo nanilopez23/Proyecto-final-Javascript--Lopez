@@ -49,21 +49,32 @@
         <br>
         <input type="number" name="precio" id="precio-producto" placeholder="Precio">Indique el precio de compra del producto:
         <br>
-        <input type="radio" name="tipo" id="tipo1-producto" value="tipo-1">Tipo 1
-        <input type="radio" name="tipo" id="tipo2-producto" value="tipo-2">Tipo 2
-        <input type="radio" name="tipo" id="tipo3-producto" value="tipo-3">Tipo 3
+        <input type="text" name="tipo" id="tipo-producto" >Tipo 
         <br>
         <input type="number" name="cantidad" id="cantidad-producto" placeholder="cantidad">Ingrese la cantidad que ha comprado:
         <br>
-        <input type="submit" name="btn"   id="buttom-cargar-producto" value="Enviar">
+        <input type="button" class="btn" name="btn"   id="buttom-cargar-producto" value="Enviar">
       </form>
     </div>
     </div>
-        <hr>
-        <h1>Curso de Javascript</h1>
-        <p>Curso coderhouse tercer semana</p>
-        <hr>
-        <h2>Ordenar objetos dentro de un array de objetos</h2>
+    <div class="container mostrar">
+      <h2 class="mostrar-h2"> Productos cargados</h2>
+      <table class="table table-hover" id="mostrarTable">
+        <thead>
+          <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Tipo</th>
+          <th>Cantidad</th>
+          <th>Select</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+
+    </div>
         
 
 
