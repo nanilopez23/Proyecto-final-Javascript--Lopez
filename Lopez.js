@@ -2,9 +2,89 @@
 //TODAVIA ESTOY EVALUANDO COMO LO VOY A HACER PERO ES UN BUEN COMIENZO 
 
 
-//agregar objetos  
 
-class producto {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*(function (){
+    let formulario = document.getElementsById("formulario")
+        elementos = formulario.elementos
+        boton = document.getElementById("buttom-cargar-producto")
+
+        var validarNombre = function (e) {
+            if (formulario.nombre.value == 0){
+                alert("Completa el campo Nombre")
+                e.preventDefault()
+            }
+        }
+        var validarPrecio = function(e){
+            if (formulario.precio.value == 0){
+                alert("indique el precio del prodcuto")
+                e.preventDefault()
+            }
+        }
+        var validarRadio = function (e){
+            if (formulario.tipo[0].checked == true || formulario.tipo[1].checked == true || formulario.tipo[2].checked == true ){
+            }else {
+                alert("completa el tipo de producto")
+                e.preventDefault()
+            }
+        }
+        var validarCantidad = function (e){
+            if (formulario.cantidad.value == 0){
+                alert("Ingrese la cantidad comprada")
+                e.preventDefault()
+            }
+        }
+
+        var validar = function (e){
+            validarNombre(e)
+            validarPrecio(e)
+            validarRadio(e)
+            validarCantidad(e)
+        }
+    formulario.addEventListener("submit", validar)
+}())
+console.log(validacion)
+*/
+
+
+
+
+/*class producto {
     constructor(nombre, precio, detalle, cantidad) {
         this.nombre = nombre
         this.precio = parseFloat(precio)
@@ -23,7 +103,7 @@ let nombreProd, precioProd, detalleProd, cantidadProd
 let listaProductos = []
 
 do{
-    nombreProd = document.getElementById("nombre-producto")
+    nombreProd = document.getElementById("nombre-prducto")
     precioProd = document.getElementById("precio-producto")
     detalleProd = document.getElementById("detalle-producto")
     cantidadProd = document.getElementById("cantidad-producto")
@@ -134,5 +214,5 @@ for (let producto of ordenadosPrecio){
     document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li></ul>")
     document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>")
     document.write("<li><h3>Precio: " + producto.precio + "</h3></li></ul><br>")
-}
+}*/
 
