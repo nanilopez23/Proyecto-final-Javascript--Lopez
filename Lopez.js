@@ -23,10 +23,10 @@ let nombreProd, precioProd, detalleProd, cantidadProd
 let listaProductos = []
 
 do{
-    nombreProd = prompt ("ingrese el nombre del producto").toLowerCase()
-    precioProd = prompt ("Ingrese el precio del producto")
-    detalleProd = prompt ("ingrese el detalle del producto")
-    cantidadProd = prompt ("Ingrese la cantidad comprada del producto")
+    nombreProd = document.getElementById("nombre-producto")
+    precioProd = document.getElementById("precio-producto")
+    detalleProd = document.getElementById("detalle-producto")
+    cantidadProd = document.getElementById("cantidad-producto")
     listaProductos.push (new producto(nombreProd, precioProd, detalleProd, cantidadProd))
 }while (nombreProd != "fin")
 
