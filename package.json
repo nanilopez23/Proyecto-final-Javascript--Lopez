@@ -4,13 +4,15 @@
   "description": "",
   "main": "Lopez.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "none-sass --include-path scss scss/style.scss scss/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nanilopez23/Javascript--Dudas--Tutor-.git"
   },
-  "author": "",
+  "author": "Nani",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nanilopez23/Javascript--Dudas--Tutor-/issues"
