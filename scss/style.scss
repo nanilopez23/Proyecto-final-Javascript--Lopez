@@ -1,5 +1,52 @@
+@import "./variables";
+
 *{
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
+}
+//navegador
+.navbar-nav{
+    text-align: center;
+}
+.navbar-nav a{
+    text-transform: uppercase !important;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    &:hover{
+        color: $secondary !important;
+
+    }
+}
+
+
+
+//body
+
+// secccion 1
+
+.text__header{
+    width: 100%;
+    height: 500px;
+    background-image: url(../Assets/jezael-melgoza-HYQvV8wWX18-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover ;
+    .text__header-text{
+        text-align: center;
+        text-transform: uppercase;
+        align-items: center;
+        .text__header-h1{
+            font-size: $fontSize-h1;
+            color: $secondary;
+            margin-top: 150px;
+        }
+        .text__header-h4{
+            font-size: $fontSize-h2;
+            color: $third;
+            margin-top: 50px;
+        }
+    }
 }
