@@ -15,5 +15,5 @@ function addProduct(pnombre, pprecio, ptipo, pcantidad){
 console.log(productList)
 
 function getproductList(){
-    return friendList
+    return productList
 }
