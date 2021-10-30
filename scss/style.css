@@ -92,4 +92,33 @@ body {
 .app .numero-caracteres .botones div {
   width: 100%;
 }
+
+.app .numero-caracteres .botones div:nth-child(1) button {
+  border-radius: 4px 0 0 4px;
+}
+
+.app .numero-caracteres input {
+  height: 40px;
+  width: 100px;
+  cursor: default;
+  background: #33257e;
+  color: white;
+}
+
+.app .numero-caracteres .botones div:nth-child(3) button {
+  border-radius: 0 4px 4px 0;
+}
+
+.app .numero-caracteres .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 /*# sourceMappingURL=style.css.map */
