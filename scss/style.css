@@ -99,7 +99,7 @@ body {
 
 .app .numero-caracteres input {
   height: 40px;
-  width: 100px;
+  width: 100%;
   cursor: default;
   background: #33257e;
   color: white;
@@ -120,5 +120,54 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.app .fila.generar {
+  margin-bottom: 10px;
+}
+
+.app .fila.generar .col:nth-child(1) {
+  width: 30%;
+}
+
+.app .fila.generar .col:nth-child(3) {
+  width: 65%;
+}
+
+.app .fila.generar .btn-generar {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  padding: 0;
+  line-height: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.app .fila.generar .btn.btn-generar i {
+  margin: 20px;
+  position: relative;
+  top: -1px;
+  font-size: 14px;
+}
+
+.app .fila.generar .btn.btn-generar:after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #684bff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 13px;
+  right: -7px;
+  z-index: 9;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.app .fila.generar .col:nth-child(1):hover .btn-generar:after {
+  background: #B4A5FF;
 }
 /*# sourceMappingURL=style.css.map */
