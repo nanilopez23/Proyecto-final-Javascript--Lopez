@@ -4,49 +4,81 @@
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
-//navegador
-.navbar-nav{
-    text-align: center;
-}
-.navbar-nav a{
-    text-transform: uppercase !important;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 10px;
-    &:hover{
-        color: $secondary !important;
-
-    }
+*::selection{
+    background-color: #33257e;
+    color: white;
 }
 
+body{
+    background: #212139;
+    color: white;
+}
 
+.contenedor{
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
 
-//body
+}
 
-// secccion 1
-
-.text__header{
+.logo{
+    margin-bottom:40px ;
     width: 100%;
-    height: 500px;
-    background-image: url(../Assets/jezael-melgoza-HYQvV8wWX18-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover ;
-    .text__header-text{
-        text-align: center;
-        text-transform: uppercase;
-        align-items: center;
-        .text__header-h1{
-            font-size: $fontSize-h1;
-            color: $secondary;
-            margin-top: 150px;
-        }
-        .text__header-h4{
-            font-size: $fontSize-h2;
-            color: $third;
-            margin-top: 50px;
-        }
-    }
+}
+
+.logo img {
+    width: 100%;
+    vertical-align:top ;
+}
+
+//filas y columnas
+
+.app .fila{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .col{
+    width: 50%;
+
+}
+
+.app label{
+    line-height: 40px;
+}
+
+.app input {
+    text-align: center;
+    border: none;
+}
+
+.app .btn{
+    width: 100%;
+    background-color: #684bff;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease; 
+}
+.app .btn:hover{
+    background: #b4a5ff;
+}
+.app .btn.false{
+    background: #33257e;
+}
+
+.app .numero-caracteres .botones div{
+    width: 100%;
+    
 }

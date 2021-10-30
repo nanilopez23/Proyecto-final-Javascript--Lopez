@@ -3,50 +3,93 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 }
 
-.navbar-nav {
-  text-align: center;
+*::-moz-selection {
+  background-color: #33257e;
+  color: white;
 }
 
-.navbar-nav a {
-  text-transform: uppercase !important;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 10px;
+*::selection {
+  background-color: #33257e;
+  color: white;
 }
 
-.navbar-nav a:hover {
-  color: #FEEC02 !important;
+body {
+  background: #212139;
+  color: white;
 }
 
-.text__header {
+.contenedor {
+  max-width: 500px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.logo {
+  margin-bottom: 40px;
   width: 100%;
-  height: 500px;
-  background-image: url(../Assets/jezael-melgoza-HYQvV8wWX18-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
-.text__header .text__header-text {
+.logo img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.app .fila {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app .col {
+  width: 50%;
+}
+
+.app label {
+  line-height: 40px;
+}
+
+.app input {
   text-align: center;
-  text-transform: uppercase;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: none;
 }
 
-.text__header .text__header-text .text__header-h1 {
-  font-size: 3rem;
-  color: #FEEC02;
-  margin-top: 150px;
+.app .btn {
+  width: 100%;
+  background-color: #684bff;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  vertical-align: top;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-.text__header .text__header-text .text__header-h4 {
-  font-size: 2rem;
-  color: #FED800;
-  margin-top: 50px;
+.app .btn:hover {
+  background: #b4a5ff;
+}
+
+.app .btn.false {
+  background: #33257e;
+}
+
+.app .numero-caracteres .botones div {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
