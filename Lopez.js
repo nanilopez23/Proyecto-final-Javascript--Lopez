@@ -19,7 +19,7 @@
 		minusculas: 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
 	}
 
-//Eventos 
+//EVENTOS
 
 // Evento para evitar que la app haga un submit
 app.addEventListener("submit", function (e){
@@ -57,13 +57,67 @@ console.log("mayusculas activadas" + configuracion.mayusculas)
 
 })
 
+app.elements.namedItem("btn-generar").addEventListener("click",function(){
+    generarPassword()
+})
 
+app.elements.namedItem("input-password").addEventListener("click", function (){
+    copiarPassword()
+})
+
+//FUNCIONES
 
 function btnToggle (elemento) {
     elemento.classList.toggle("false")
     elemento.childNodes[0].classList.toggle("fa-check")
     elemento.childNodes[0].classList.toggle("fa-times")
 }
+
+
+//generador de contraseña 
+
+
+function generarPassword() {
+    var caracteresFinales = ""
+    var password = ""
+
+    for (propiedad in configuracion){
+        if (configuracion[propiedad] == true){
+            caracteresFinales += caracteres[propiedad]
+        }
+    }
+    console.log(caracteresFinales)
+
+    //creando array
+    caracteresFinales = caracteresFinales.trim()
+    caracteresFinales = caracteresFinales.split(" ")
+
+    console.log(caracteresFinales)
+    
+    for (var i = 0; i < configuracion.caracteres; i++ ){
+        password = password + caracteresFinales[Math.floor(Math.random() * caracteresFinales.length )]
+    }
+
+    console.log (password)
+
+    app.elements.namedItem("input-password").value = password
+}
+// fin de funcion generar password 
+
+function copiarPassword() {
+    app.elements.namedItem("input-password").select()
+    document.execCommand("copy")
+    document.getElementById("alerta-copiado").classList.add("active")
+    
+    setTimeout(function(){
+        document.getElementById("alerta-copiado").classList.remove("active")
+
+    }, 2000)
+}
+
+generarPassword()
+
+
 
 
 }()) 
