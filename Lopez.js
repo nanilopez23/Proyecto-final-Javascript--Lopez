@@ -1,10 +1,10 @@
 
 (function (){
     //Variables y Objetos 
-    var app = document.getElementById("app");
-    var inputCaracteres = document.getElementById("numero-caracteres")
+    let app = document.getElementById("app");
+    let inputCaracteres = document.getElementById("numero-caracteres")
 
-    var configuracion = {
+    let configuracion = {
         caracteres: parseInt(inputCaracteres.value),
 		simbolos: true,
 		numeros: true,
@@ -12,7 +12,7 @@
 		minusculas: true
     }
 
-    var caracteres = {
+    let caracteres = {
 		numeros: '0 1 2 3 4 5 6 7 8 9',
 		simbolos: '! @ # $ % ^ & * ( ) _ - + = { [ } ] ; : < , > . ? /',
 		mayusculas: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z',
@@ -78,8 +78,8 @@ function btnToggle (elemento) {
 
 
 function generarPassword() {
-    var caracteresFinales = ""
-    var password = ""
+    let caracteresFinales = ""
+    let password = ""
 
     for (propiedad in configuracion){
         if (configuracion[propiedad] == true){
@@ -94,7 +94,7 @@ function generarPassword() {
 
     console.log(caracteresFinales)
     
-    for (var i = 0; i < configuracion.caracteres; i++ ){
+    for (let i = 0; i < configuracion.caracteres; i++ ){
         password = password + caracteresFinales[Math.floor(Math.random() * caracteresFinales.length )]
     }
 
